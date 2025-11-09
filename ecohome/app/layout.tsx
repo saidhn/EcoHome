@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Cairo } from "next/font/google";
+import './global.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const cairo = Cairo({
+  subsets: ["arabic"], // أو ["latin"] حسب الحاجة
+  weight: ["400", "600", "700"], // الأوزان اللي بدك إياها
+  variable: "--font-cairo", // اسم CSS variable لو بدك تستخدمه بتايلوند
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${cairo.className}  antialiased`}
       >
         {children}
       </body>

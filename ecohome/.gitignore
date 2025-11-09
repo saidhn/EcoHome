@@ -17,6 +17,40 @@
 /.next/
 /out/
 
+# npm / yarn / pnpm cache
+.cache/
+.npm/
+.yarn/cache/
+
+# Env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Secrets / certificates
+*.key
+*.crt
+# Logs
+logs
+*.log
+
+# Temp files
+tmp/
+temp/
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+# VSCode
+.vscode/
+.history/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
 # production
 /build
 
