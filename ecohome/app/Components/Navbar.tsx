@@ -10,7 +10,7 @@ const NavBar = () => {
         <Link href="/contact" className="hover:text-[#ddac73] transition-colors duration-200">تواصل</Link>
         <Link href="/about" className="hover:text-[#ddac73] transition-colors duration-200">عنا</Link>
         <Link href="/service" className="hover:text-[#ddac73] transition-colors duration-200">خدماتنا</Link>
-        <Link href="#" className="hover:text-[#ddac73] transition-colors duration-200">مشاريعنا</Link>
+        <Link href="/projects" className="hover:text-[#ddac73] transition-colors duration-200">مشاريعنا</Link>
         <Link href="/" className="hover:text-[#ddac73] transition-colors duration-200">الرئيسية</Link>
       </div>
       <div>
