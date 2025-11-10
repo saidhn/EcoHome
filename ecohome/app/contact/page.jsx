@@ -31,7 +31,6 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
     const error = validateForm();
     if (error) return alert(error);
 
