@@ -3,6 +3,8 @@ import NavBar from '@/app/Components/Navbar';
 import { models } from '../../db/db'; // تأكد من المسار
 import Footer from '@/app/Components/footer';
 
+
+
 const ModelDetail = async ({ params }) => {
   const { id } = await params;
   const model = models.find((m) => m.id === Number(id));
