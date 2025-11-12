@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { MapPin } from "lucide-react";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
@@ -29,27 +27,33 @@ const ContactUs = () => {
     return null;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const error = validateForm();
-    if (error) return alert(error);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  const error = validateForm();
+  if (error) return alert(error);
 
-    setLoading(true);
-    try {
-      await addDoc(collection(db, "contacts"), {
-        ...form,
-        createdAt: Timestamp.now(),
-      });
+  setLoading(true);
+  try {
+    const res = await fetch("/api/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-      alert("تم إرسال رسالتك بنجاح!");
+    if (res.ok) {
+      alert("✅ تم إرسال الرسالة بنجاح!");
       setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      alert("حدث خطأ أثناء الإرسال");
-    } finally {
-      setLoading(false);
+    } else {
+      alert("❌ فشل في إرسال الرسالة، حاول مرة أخرى.");
     }
-  };
+  } catch (err) {
+    console.error(err);
+    alert("❌ حدث خطأ أثناء الإرسال.");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
     return (
         <>

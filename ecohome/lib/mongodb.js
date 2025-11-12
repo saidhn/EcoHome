@@ -1,20 +1,11 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  throw new Error("❌ لم يتم تعريف MONGODB_URI في ملف .env.local");
-}
-
-let isConnected = false;
-
 export const connectDB = async () => {
-  if (isConnected) return;
+  if (mongoose.connections[0].readyState) return;
   try {
-    await mongoose.connect(MONGODB_URI);
-    isConnected = true;
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("✅ MongoDB Connected");
-  } catch (error) {
-    console.log("MongoDB connection error:", error);
+  } catch (err) {
+    console.error("❌ MongoDB Connection Error:", err);
   }
 };
