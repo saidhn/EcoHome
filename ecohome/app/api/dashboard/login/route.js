@@ -9,7 +9,7 @@ export async function POST(req) {
   // ✅ مثال بسيط للتحقق
   if (username === "Basel" && password === "Basel@32") {
     const token = jwt.sign({ username }, SECRET, { expiresIn: "1h" });
-    const res = NextResponse.json({ message: "تم تسجيل الدخول" });
+    const res = NextResponse.json({ success: true, message: "تم تسجيل الدخول" });
     // إضافة cookie
     res.cookies.set("dashboard_token", token, { httpOnly: true, path: "/" });
     return res;

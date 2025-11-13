@@ -41,7 +41,7 @@ const FeaturedModels = () => {
 
       <div className="text-center mt-8">
         <Link
-          href="/models"
+          href="/projects"
           className="px-6 py-1 border border-gray-400 rounded hover:bg-gray-100"
         >
           استكشف المزيد

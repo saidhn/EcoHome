@@ -2,26 +2,27 @@ import { connectDB } from "../../../lib/mongodb";
 import Product from "../../models/Product";
 import { NextResponse } from "next/server";
 
+// رفع منتج بعد رفع الصور من Frontend
+export async function POST(req) {
+  await connectDB();
+  const data = await req.json(); // يحتوي على images[] روابط من Cloudinary
+  try {
+    const product = await Product.create(data);
+    return NextResponse.json(product, { status: 201 });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "حدث خطأ أثناء إضافة المنتج" }, { status: 500 });
+  }
+}
+
+// GET لجلب المنتجات
 export async function GET() {
   await connectDB();
   const products = await Product.find();
   return NextResponse.json(products);
 }
 
-export async function POST(req) {
-  await connectDB();
-  const data = await req.json();
-  const product = await Product.create(data);
-  return NextResponse.json(product);
-}
-
-export async function PUT(req) {
-  await connectDB();
-  const { _id, ...rest } = await req.json();
-  const updated = await Product.findByIdAndUpdate(_id, rest, { new: true });
-  return NextResponse.json(updated);
-}
-// ✅ إضافة PATCH لتعديل المنتج
+// PATCH لتعديل المنتج
 export async function PATCH(req) {
   await connectDB();
   const { id, ...updateData } = await req.json();
@@ -29,6 +30,7 @@ export async function PATCH(req) {
   return NextResponse.json(updatedProduct);
 }
 
+// DELETE لحذف المنتج
 export async function DELETE(req) {
   await connectDB();
   const { id } = await req.json();

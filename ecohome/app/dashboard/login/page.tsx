@@ -8,19 +8,25 @@ const LoginPage = () => {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await fetch("/api/dashboard/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-    if (res.ok) {
-      router.push("/dashboard"); // تحويل للداشبورد بعد تسجيل الدخول
-    } else {
-      alert("اسم المستخدم أو كلمة المرور خطأ");
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const res = await fetch("/api/dashboard/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+    credentials: "include", // ⚠️ مهم جدًا
+  });
+
+  const data = await res.json();
+  console.log("Login response:", data);
+
+  if (res.ok && data.success) {
+  window.location.href = "/dashboard";
+}else {
+    alert("اسم المستخدم أو كلمة المرور خطأ");
+  }
+};
 
   return (
     <div className="flex justify-center items-center h-screen">
