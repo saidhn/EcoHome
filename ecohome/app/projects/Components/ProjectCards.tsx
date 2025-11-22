@@ -64,7 +64,7 @@ const ProductCards = () => {
               <p className="mb-3 font-normal text-gray-700">{product.description}</p>
 
               {/* صور إضافية */}
-              {product.images?.length > 1 && (
+              {/* {product.images?.length > 1 && (
                 <div className="flex gap-2 flex-wrap mb-3">
                   {product.images.slice(1).map((img, i) => (
                     <img
@@ -75,7 +75,7 @@ const ProductCards = () => {
                     />
                   ))}
                 </div>
-              )}
+              )} */}
 
               {/* زر عرض التفاصيل */}
               <Link
