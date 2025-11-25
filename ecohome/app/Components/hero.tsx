@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative w-full h-[80vh]">
@@ -20,11 +20,11 @@ const Hero = () => {
         <p className="max-w-xl text-lg md:text-xl">
           استمتع بمستقبل عيشٍ أفضل مع منازلنا الجاهزة المصممة بإتقان. تصميم مستدام يتناغم مع الراحة العصرية.
         </p>
-        <button
+        <Link href='/projects'
           className="mt-4 bg-[#C09059] transition-color duration-200 hover:bg-[#ddac73] px-6 py-3 rounded-lg text-white font-semibold"
         >
           اكتشفنا
-        </button>
+        </Link>
       </div>
     </section>
   );

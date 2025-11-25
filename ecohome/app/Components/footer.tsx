@@ -12,9 +12,9 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-4">الشركة</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#C09059]">عن الشركة</a></li>
-            <li><a href="#" className="hover:text-[#C09059]">منتجاتنا</a></li>
-            <li><a href="#" className="hover:text-[#C09059]">المدونة</a></li>
+            <li><a href="/about" className="hover:text-[#C09059]">عن الشركة</a></li>
+            <li><a href="/projects" className="hover:text-[#C09059]">منتجاتنا</a></li>
+            {/* <li><a href="#" className="hover:text-[#C09059]">المدونة</a></li> */}
           </ul>
         </div>
 
@@ -22,8 +22,8 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-4">دعم فني</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#C09059]">تواصل معنا</a></li>
-            <li><a href="#" className="hover:text-[#C09059]">روابط سريعة</a></li>
+            <li><a href="/contact" className="hover:text-[#C09059]">تواصل معنا</a></li>
+            {/* <li><a href="#" className="hover:text-[#C09059]">روابط سريعة</a></li> */}
           </ul>
         </div>
 

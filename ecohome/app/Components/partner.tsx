@@ -13,9 +13,9 @@ const Partner = ()=>{
 
   <div className="flex flex-wrap justify-center gap-8 mt-10">
     {[
-      { id: 1, src: "https://www.youtube.com/embed/Nqp3Asr-E7Q?autoplay=1&mute=1&loop=1&playlist=Nqp3Asr-E7Q" },
-      { id: 2, src: "https://www.youtube.com/embed/JXATM5Rd6DA?autoplay=1&mute=1&loop=1&playlist=JXATM5Rd6DA" },
-      { id: 3, src: "https://www.youtube.com/embed/DursS00BQ0c?autoplay=1&mute=1&loop=1&playlist=DursS00BQ0c" },
+      { id: 1, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060811/VEDIO1_q3aqxv.mp4" },
+      { id: 2, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060810/VEDIO2_rqclcn.mp4" },
+      { id: 3, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060806/VEDIO3_adledq.mp4" },
     ].map((v) => (
       <div
         key={v.id}
