@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/models/[id]/page.jsx", "app/dashboard/messages/page.jsx", "app/dashboard/login/page.jsx", "app/dashboard/page.jsx", "app/dashboard/Products/page.jsx"  ],
+, "app/models/[id]/page.jsx", "app/dashboard/messages/page.jsx", "app/dashboard/login/page.jsx", "app/dashboard/page.jsx", "app/dashboard/Products/page.jsx", "app/service/Components/servicedb.jsx", "app/projects/Components/ProjectCards.jsx", "app/models/featuerModels.jsx", "app/models/[id]/Components/VideoToggle.jsx", "app/models/[id]/Components/slider-client.jsx", "app/about/Components/story.jsx", "app/about/Components/Ourvalues.jsx"  ],
   "exclude": ["node_modules"]
 }
