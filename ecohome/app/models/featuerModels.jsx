@@ -8,7 +8,7 @@ const FeaturedModels = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("/api/product");
+      const res = await fetch("/app/api/product");
       const data = await res.json();
       setProducts(data);
     } catch (error) {

@@ -34,7 +34,7 @@ const ContactUs = () => {
 
   setLoading(true);
   try {
-    const res = await fetch("/api/messages", {
+    const res = await fetch("/app/api/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
