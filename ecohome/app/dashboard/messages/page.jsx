@@ -7,7 +7,7 @@ const MessagesDashboard = () => {
   // جلب الرسائل من MongoDB
   const fetchMessages = async () => {
     try {
-      const res = await fetch("/app/api/messages");
+      const res = await fetch("/api/messages");
       if (!res.ok) throw new Error("فشل في جلب الرسائل");
       const data = await res.json();
       setMessages(data);
@@ -25,7 +25,7 @@ const MessagesDashboard = () => {
   const handleDelete = async (id) => {
     if (!confirm("هل تريد حذف الرسالة؟")) return;
     try {
-      const res = await fetch("/app/api/messages", {
+      const res = await fetch("/api/messages", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),

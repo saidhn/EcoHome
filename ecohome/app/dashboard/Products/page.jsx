@@ -18,7 +18,7 @@ const ProductsDashboard = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchProducts = async () => {
-    const res = await fetch("/app/api/product");
+    const res = await fetch("/api/product");
     const data = await res.json();
     setProducts(data);
   };
@@ -80,7 +80,7 @@ const ProductsDashboard = () => {
       const productData = { ...form, images: uploadedImages, video: uploadedVideo };
       const method = editingId ? "PATCH" : "POST";
 
-      const apiRes = await fetch("/app/api/product", {
+      const apiRes = await fetch("/api/product", {
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editingId ? { id: editingId, ...productData } : productData),
@@ -111,7 +111,7 @@ const ProductsDashboard = () => {
 
   const handleDelete = async (id) => {
     if (!confirm("هل أنت متأكد من حذف المنتج؟")) return;
-    await fetch("/app/api/product", {
+    await fetch("/api/product", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id }),
