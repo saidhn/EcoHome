@@ -8,4 +8,5 @@ const MessageSchema = new mongoose.Schema({
   message: String,
 });
 
+// ✅ هذا يمنع مشاكل overwrite على serverless
 export default mongoose.models.Message || mongoose.model("Message", MessageSchema);
