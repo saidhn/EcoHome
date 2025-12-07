@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         <div>
-          <h4 className="font-bold mb-4">EcoHomes</h4>
+          <h4 className="font-bold mb-4">ReframeBuilds</h4>
           <p>منازل ذكية مستدامة وجاهزة للسكن</p>
         </div>
 
@@ -30,15 +30,15 @@ const Footer = () => {
 
         <div>
           <h4 className="font-bold mb-4">تواصل معنا</h4>
-          <p>شارع محمد يوسف، النصر - الشيخ رضوان</p>
+          {/* <p>شارع محمد يوسف، النصر - الشيخ رضوان</p> */}
           <p>+972 59-753-9554</p>
-          <p>info@ecohomes.com</p>
+          <p>basel_1100@hotmail.com</p>
         </div>
       </div>
 
 
       <div className="text-center text-gray-500 mt-8 text-sm">
-        © 2025 EcoHomes. All rights reserved.
+        © 2025 reframebuilds. All rights reserved.
       </div>
     </footer>
   );

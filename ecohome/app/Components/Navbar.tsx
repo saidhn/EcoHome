@@ -4,7 +4,9 @@ const NavBar = () => {
   return (
     <nav className="flex flex-wrap shadow-md items-center justify-around p-4 bg-gray-100">
       <div>
-        <Link href="/" className="text-xl font-bold text-[#C09059] cursor-pointer">EcoHome</Link>
+        <Link href="/" className="text-xl items-center flex font-bold text-[#C09059] cursor-pointer">
+          <span className="pl-3">reframe<span className="text-gray-500">builds</span></span><img src="/reframebuilds.png" width={50}/> 
+        </Link>
       </div>
       <div className="flex gap-6 text-[#C09059]">
         <Link href="/contact" className="hover:text-[#ddac73] transition-colors duration-200">تواصل</Link>

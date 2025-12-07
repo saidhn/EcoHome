@@ -8,7 +8,7 @@ const Story = () => {
 
                 <div className="space-y-4 text-[#474747] leading-relaxed text-lg">
                     <p>
-                        تأسست شركة <span className="font-semibold text-[#C09059]">EcoHomes</span> في عام 2015، انطلاقاً
+                        تأسست شركة <span className="font-semibold text-[#C09059]">ReframeBuilds</span> في عام 2015، انطلاقاً
                         من اعتقاد بسيط: يستحق الجميع منزلًا جميلًا ومستدامًا دون أوقات بناء طويلة وتكاليف باهظة للبناء
                         التقليدي.
                     </p>
@@ -25,7 +25,7 @@ const Story = () => {
                 </div>
             </div>
 
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full p-3 md:w-1/2 flex justify-center">
                 <img
                     src="/about.jpg"
                     alt="عن EcoHomes"
