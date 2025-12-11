@@ -61,7 +61,7 @@ const ProductCards = () => {
                 المساحة: {product.size} م² | الغرف: {product.rooms} | الحمامات: {product.baths}
               </p>
 
-              <p className="mb-3 font-normal text-gray-700">{product.description}</p>
+              <p className="mb-3 font-normal text-gray-700 line-clamp-2">{product.description}</p>
 
               {/* صور إضافية */}
               {/* {product.images?.length > 1 && (
@@ -80,7 +80,7 @@ const ProductCards = () => {
               {/* زر عرض التفاصيل */}
               <Link
                 href={`/models/${product._id}`}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+                className="mt-4 inline-block bg-[#C09059] text-white px-4 py-2 rounded"
               >
                 عرض التفاصيل
               </Link>

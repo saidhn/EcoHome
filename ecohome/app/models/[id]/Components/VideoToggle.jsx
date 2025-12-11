@@ -20,13 +20,13 @@ const VideoModal = ({ videoUrl }) => {
   {showModal && (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-gray-50 bg-opacity-80"
-      onClick={() => setShowModal(false)} // إغلاق عند الضغط على الخلفية
+      onClick={() => setShowModal(false)}
     >
       <div
         className="bg-white rounded-lg p-4 max-w-3xl w-full relative"
-        onClick={(e) => e.stopPropagation()} // منع إغلاق عند الضغط داخل المودال
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* زر إغلاق المودال */}
+        {/* زر إغلاق */}
         <button
           onClick={() => setShowModal(false)}
           className="absolute top-2 right-2 text-gray-700 text-xl font-bold"
@@ -34,14 +34,22 @@ const VideoModal = ({ videoUrl }) => {
           ×
         </button>
 
-        {/* الفيديو */}
-        <video controls className="w-full rounded-lg shadow-lg">
-          <source src={videoUrl} type="video/mp4" />
-        </video>
+        {/* صندوق ثابت الأبعاد + Scroll عند اللزوم */}
+        <div className="w-full h-[500px] overflow-auto rounded-lg shadow-lg bg-black">
+          <video
+            autoPlay
+            controls
+            muted
+            className="w-full h-full object-contain"
+          >
+            <source src={videoUrl} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
   )}
 </>
+
 
   );
 };

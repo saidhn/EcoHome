@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 const ProductsDashboard = () => {
   const [products, setProducts] = useState([]);
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [editingId, setEditingId] = useState(null);
   const [form, setForm] = useState({
     name: "",
@@ -38,6 +39,42 @@ const ProductsDashboard = () => {
     setEditingId(product._id);
     setForm({ ...product, video: null }); // video file input جديد
   };
+  const uploadVideoWithProgress = (file) => {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData();
+
+    formData.append("file", file);
+    formData.append("upload_preset", "products_upload");
+
+    xhr.open(
+      "POST",
+      "https://api.cloudinary.com/v1_1/do1j98mlk/video/upload"
+    );
+
+    // 🔥 تحديث نسبة التقدم
+    xhr.upload.onprogress = (e) => {
+      if (e.lengthComputable) {
+        const percent = Math.round((e.loaded * 100) / e.total);
+        setUploadProgress(percent);
+      }
+    };
+
+    // عند الانتهاء
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.responseText));
+      } else {
+        reject("Upload failed");
+      }
+    };
+
+    xhr.onerror = () => reject("Network error");
+
+    xhr.send(formData);
+  });
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,19 +83,11 @@ const ProductsDashboard = () => {
     try {
       let uploadedVideo = form.video; // في حال لم يتم رفع جديد
 
-      // رفع الفيديو إذا تم اختيار ملف جديد
-      if (form.video && typeof form.video !== "string") {
-        const videoData = new FormData();
-        videoData.append("file", form.video);
-        videoData.append("upload_preset", "products_upload");
+if (form.video && typeof form.video !== "string") {
+  const videoRes = await uploadVideoWithProgress(form.video);
+  uploadedVideo = videoRes.secure_url;
+}
 
-        const videoRes = await fetch(
-          `https://api.cloudinary.com/v1_1/do1j98mlk/video/upload`,
-          { method: "POST", body: videoData }
-        );
-        const videoJson = await videoRes.json();
-        uploadedVideo = videoJson.secure_url;
-      }
 
       const uploadedImages = [];
       for (const file of form.images) {
@@ -128,22 +157,46 @@ const ProductsDashboard = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <input name="name" placeholder="اسم المنتج" value={form.name} onChange={handleChange} className="border p-3 rounded-lg" />
-          <input name="price" type="number" placeholder="السعر" value={form.price} onChange={handleChange} className="border p-3 rounded-lg" />
-          <input name="category" placeholder="الصنف" value={form.category} onChange={handleChange} className="border p-3 rounded-lg" />
-          <input name="size" type="number" placeholder="المساحة" value={form.size} onChange={handleChange} className="border p-3 rounded-lg" />
-          <input name="rooms" type="number" placeholder="عدد الغرف" value={form.rooms} onChange={handleChange} className="border p-3 rounded-lg" />
-          <input name="baths" type="number" placeholder="عدد الحمامات" value={form.baths} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="name" type="text" placeholder="اسم المنتج" value={form.name} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="price" type="text" placeholder="السعر" value={form.price} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="category" type="text" placeholder="الصنف" value={form.category} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="size" type="text" placeholder="المساحة" value={form.size} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="rooms" type="text" placeholder="عدد الغرف" value={form.rooms} onChange={handleChange} className="border p-3 rounded-lg" />
+          <input name="baths" type="text" placeholder="عدد الحمامات" value={form.baths} onChange={handleChange} className="border p-3 rounded-lg" />
         </div>
 
         <textarea name="description" placeholder="الوصف" value={form.description} onChange={handleChange} className="border p-3 rounded-lg w-full"></textarea>
 
         <input type="file" multiple onChange={handleImagesChange} className="border p-3 rounded-lg w-full" />
-        <input type="file" accept="video/*" onChange={(e) => setForm({ ...form, video: e.target.files[0] })} className="border p-3 rounded-lg w-full" />
+        <input
+  type="file"
+  accept="video/*"
+  onChange={(e) => setForm({ ...form, video: e.target.files[0] })}
+  className="border p-3 rounded-lg w-full"
+/>
 
-        <button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded">
-          {editingId ? "تعديل المنتج" : "إضافة المنتج"}
-        </button>
+{/* 🔥 Progress Bar تحت الانبوت مباشرة */}
+{uploadProgress > 0 && uploadProgress < 100 && (
+  <div className="mt-2 w-full bg-gray-300 rounded h-3 overflow-hidden">
+    <div
+      className="bg-green-600 h-full transition-all"
+      style={{ width: `${uploadProgress}%` }}
+    ></div>
+  </div>
+)}
+
+{uploadProgress === 100 && (
+  <p className="text-green-600 mt-2">✔ تم رفع الفيديو بنجاح</p>
+)}
+
+
+        <button
+        type="submit"
+        className={`w-full p-3 rounded text-white ${loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"}`}
+        disabled={loading} // نمنع الضغط أثناء التحميل
+      >
+        {loading ? "جاري الإضافة..." : editingId ? "تعديل المنتج" : "إضافة المنتج"}
+      </button>
       </form>
 
       <div className="overflow-x-auto overflow-y-auto max-h-[500px] shadow rounded-lg bg-white mt-6">
