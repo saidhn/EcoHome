@@ -3,7 +3,7 @@ const WhyUs = () =>{
     return(
         <section className="bg-[#EEEAE2]">
             <div className="text-center">
-                <h2 className="font-bold py-5 text-[#474747] text-3xl">لماذا تختار EcoHomes</h2>
+                <h2 className="font-bold py-5 text-[#474747] text-3xl">لماذا تختار reframebuilds</h2>
                 <p className="text-center text-[#606060] px-3 mb-5">
                     نحن ملتزمون بتقديم منازل استثنائية تجمع بين الابتكار والاستدامة
                     والقدرة على تحمل التكاليف.
