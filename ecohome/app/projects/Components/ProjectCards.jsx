@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
+  const [loadingId, setLoadingId] = useState(null);
   const [page, setPage] = useState(1);
   const limit = 9;
 
@@ -79,10 +80,12 @@ const ProductCards = () => {
 
               {/* زر عرض التفاصيل */}
               <Link
+                key={product._id}
+                onClick={()=> setLoadingId(product._id)}
                 href={`/models/${product._id}`}
                 className="mt-4 inline-block bg-[#C09059] text-white px-4 py-2 rounded"
               >
-                عرض التفاصيل
+                {loadingId === product._id ? 'Loading...' : 'عرض التفاصيل'}
               </Link>
             </div>
           </div>

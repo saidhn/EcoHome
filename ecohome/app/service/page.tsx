@@ -10,7 +10,7 @@ const Service = ()=>{
                 <div className="text-center bg-[#EEEAE2] py-5">
                     <h2 className="font-bold py-5 text-[#474747] text-3xl">خدماتنا </h2>
                         <p className="text-center text-[#606060] mb-5">
-                            حلول شاملة لرحلتك مع منزلك الجاهز، من التصميم الأولي إلى الدعم مدى الحياة.     
+                            حلول شاملة لرحلتك مع منزلك الجاهز، من التصميم الأولي إلى منزل العمر.        
                         </p>
                 </div>
             </div>

@@ -4,7 +4,7 @@ const OurValues = () => {
         <div className="text-center bg-[#EEEAE2] py-5">
             <h2 className="font-bold py-5 text-[#474747] text-3xl">قيمنا </h2>
             <p className="text-center text-[#606060] mb-5">
-                توجه هذه المبادئ الأساسية كل ما نقوم به، من التصميم إلى التسليم.
+تكمن قيمنا في المبادئ الأساسية في كل ما نقوم به، من مرحلة التصميم إلى مرحلة التسليم.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 py-10">

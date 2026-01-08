@@ -174,7 +174,7 @@ const ContactUs = () => {
                                 <Phone className="text-[#C09059]" size={36} />
                                 <div>
                                     <h3 className="font-bold text-[#707070] text-xl">اتصال</h3>
-                                    <p className="text-[#707070]">+972598700073</p>
+                                    {/* <p className="text-[#707070]">+972598700073</p> */}
                                     <p className="text-[#707070]">+972 59-753-9554</p>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@ const ContactUs = () => {
                                 <div>
                                     <h3 className="font-bold text-[#707070] text-xl">الإيميل</h3>
                                     <p className="text-[#707070]">baselher@gmail.com</p>
-                                    <p className="text-[#707070]">info@ecohomes.com</p>
+                                    {/* <p className="text-[#707070]">info@ecohomes.com</p> */}
                                 </div>
                             </div>
                         </div>

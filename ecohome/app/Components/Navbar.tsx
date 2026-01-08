@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="flex flex-wrap shadow-md items-center justify-around p-4 bg-gray-100">
       <div>
         <Link href="/" className="text-xl items-center flex font-bold text-[#C09059] cursor-pointer">
-          <span className="pl-3">reframe<span className="text-gray-500">builds</span></span><img src="/reframebuilds.png" width={50}/> 
+          <img src="/reframebuilds.png" width={50}/> 
         </Link>
       </div>
       <div className="flex gap-6 text-[#C09059]">
@@ -16,9 +16,9 @@ const NavBar = () => {
         <Link href="/" className="hover:text-[#ddac73] transition-colors duration-200">الرئيسية</Link>
       </div>
       <div>
-        <button className="bg-[#C09059] cursor-pointer hover:bg-[#ddac73] text-white px-4 py-1 shadow-md rounded-lg transition-colors duration-200">
+        {/* <button className="bg-[#C09059] cursor-pointer hover:bg-[#ddac73] text-white px-4 py-1 shadow-md rounded-lg transition-colors duration-200">
           عرض سعر
-        </button>
+        </button> */}
       </div>
     </nav> 
   )

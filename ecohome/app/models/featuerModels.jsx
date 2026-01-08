@@ -5,6 +5,8 @@ import Link from "next/link";
 
 const FeaturedModels = () => {
   const [products, setProducts] = useState([]);
+  const [loadingId, setLoadingId] = useState(null)
+
 
   const fetchProducts = async () => {
     try {
@@ -49,10 +51,12 @@ const FeaturedModels = () => {
               <p className="text-gray-700 text-sm line-clamp-2">{model.description}</p>
 
               <Link
+              key={model._id}
+              onClick={()=> setLoadingId(model._id)}
                 href={`/models/${model._id}`}
                 className="mt-4 inline-block bg-[#C09059] text-white px-4 py-2 rounded"
               >
-                تفــاصـيـل
+                {loadingId === model._id ? 'Loading...' : 'تفــاصـيـل'}
               </Link>
             </div>
           </div>
