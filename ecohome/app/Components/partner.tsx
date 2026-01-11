@@ -13,9 +13,9 @@ const Partner = ()=>{
 
   <div className="flex flex-wrap justify-center gap-8 mt-10">
     {[
-      { id: 1, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060811/VEDIO1_q3aqxv.mp4" },
-      { id: 2, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060810/VEDIO2_rqclcn.mp4" },
-      { id: 3, src: "https://res.cloudinary.com/do1j98mlk/video/upload/v1764060806/VEDIO3_adledq.mp4" },
+      { id: 1, src: "/v1.mp4" },
+      { id: 2, src: "/v2.mp4" },
+      { id: 3, src: "/v3.mp4" },
     ].map((v) => (
       <div
         key={v.id}
@@ -25,7 +25,7 @@ const Partner = ()=>{
           className="w-[280px] h-[180px] rounded-lg"
           src={v.src}
           title={"video-" + v.id}
-          allow="autoplay; encrypted-media"
+          allow=" encrypted-media"
         ></iframe>
       </div>
     ))}
