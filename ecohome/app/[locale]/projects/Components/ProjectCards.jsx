@@ -1,12 +1,15 @@
 "use client";
+
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslations } from 'next-intl';
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
   const [loadingId, setLoadingId] = useState(null);
   const [page, setPage] = useState(1);
   const limit = 9;
+  const t = useTranslations('projects');
 
   // جلب المنتجات من API
   const fetchProducts = async () => {
@@ -31,7 +34,7 @@ const ProductCards = () => {
   const paginatedProducts = products.slice(start, end);
 
   if (products.length === 0)
-    return <p className="text-center text-gray-500 mt-10">لا توجد منتجات حالياً.</p>;
+    return <p className="text-center text-gray-500 mt-10">{t('no_products')}</p>;
 
   return (
     <div className="w-full">
@@ -56,27 +59,13 @@ const ProductCards = () => {
                 {product.name}
               </h5>
 
-              <p className="mb-1 font-semibold text-gray-700">السعر: {product.price} $</p>
-              <p className="mb-1 font-semibold text-gray-700">الصنف: {product.category}</p>
+              <p className="mb-1 font-semibold text-gray-700">{t('price')}: {product.price} $</p>
+              <p className="mb-1 font-semibold text-gray-700">{t('category')}: {product.category}</p>
               <p className="mb-1 text-gray-600">
-                المساحة: {product.size} م² | الغرف: {product.rooms} | الحمامات: {product.baths}
+                {t('size')}: {product.size} {t('sqm')} | {t('rooms')}: {product.rooms} | {t('baths')}: {product.baths}
               </p>
 
               <p className="mb-3 font-normal text-gray-700 line-clamp-2">{product.description}</p>
-
-              {/* صور إضافية */}
-              {/* {product.images?.length > 1 && (
-                <div className="flex gap-2 flex-wrap mb-3">
-                  {product.images.slice(1).map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt={`img-${i}`}
-                      className="w-20 h-20 object-cover rounded"
-                    />
-                  ))}
-                </div>
-              )} */}
 
               {/* زر عرض التفاصيل */}
               <Link
@@ -85,7 +74,7 @@ const ProductCards = () => {
                 href={`/models/${product._id}`}
                 className="mt-4 inline-block bg-[#C09059] text-white px-4 py-2 rounded"
               >
-                {loadingId === product._id ? 'Loading...' : 'عرض التفاصيل'}
+                {loadingId === product._id ? t('loading') : t('details')}
               </Link>
             </div>
           </div>
@@ -99,11 +88,11 @@ const ProductCards = () => {
           disabled={page === 1}
           className="px-4 py-2 border rounded disabled:opacity-30"
         >
-          السابق
+          {t('prev')}
         </button>
 
         <span className="px-3 py-2">
-          صفحة {page} من {Math.ceil(products.length / limit)}
+          {t('page')} {page} {t('of')} {Math.ceil(products.length / limit)}
         </span>
 
         <button
@@ -111,7 +100,7 @@ const ProductCards = () => {
           disabled={end >= products.length}
           className="px-4 py-2 border rounded disabled:opacity-30"
         >
-          التالي
+          {t('next')}
         </button>
       </div>
     </div>

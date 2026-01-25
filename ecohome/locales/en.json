@@ -1,4 +1,36 @@
 {
+  "projects": {
+    "title": "Our Home Models",
+    "subtitle": "Discover our most popular ready-made home designs, each crafted with attention to detail and sustainability.",
+    "no_products": "No products available currently.",
+    "price": "Price",
+    "category": "Category",
+    "size": "Size",
+    "sqm": "sqm",
+    "rooms": "Rooms",
+    "baths": "Baths",
+    "loading": "Loading...",
+    "details": "View Details",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "models": {
+    "featured_title": "Featured Models",
+    "featured_subtitle": "Discover our most popular ready-made home designs, each crafted with attention to detail and sustainability.",
+    "sqm": "sqm",
+    "loading": "Loading...",
+    "details": "Details",
+    "explore_more": "Explore More",
+    "not_found": "Product not found",
+    "size": "Size",
+    "rooms": "Rooms",
+    "baths": "Baths",
+    "category": "Category",
+    "price_starts_from": "Prices start from:"
+  },
+
   "common": {
     "company_name": "ReframeBuilds",
     "tagline": "Smart. Sustainable. Ready-to-Live Homes"

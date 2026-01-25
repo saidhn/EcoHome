@@ -1,15 +1,19 @@
+
 import NavBar from "../Components/Navbar"
 import ProductCards from "./Components/ProjectCards"
+import { useTranslations } from 'next-intl';
 
-const ProductHouses = ()=>{
-    return(
+const ProductHouses = () => {
+    const t = useTranslations('projects');
+    return (
         <>
             <NavBar />
             <div>
                 <div className="text-center bg-[#EEEAE2] py-5">
-                    <h2 className="font-bold py-5 text-[#474747] text-3xl">نماذجنا المنزلية </h2>
-                        <p className="text-center text-[#606060] mb-5"> 
-اكتشف تصاميم منازلنا الجاهزة الأكثر شعبية، والتي تم تصميم كل منها باهتمام بالتفاصيل والاستدامة.                        </p>
+                    <h2 className="font-bold py-5 text-[#474747] text-3xl">{t('title')}</h2>
+                    <p className="text-center text-[#606060] mb-5">
+                        {t('subtitle')}
+                    </p>
                 </div>
             </div>
 
