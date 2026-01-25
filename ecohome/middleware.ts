@@ -11,19 +11,25 @@ const intlMiddleware = createMiddleware({
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // السماح بصفحة تسجيل الدخول (allow dashboard login page)
+  if (pathname === "/dashboard/login" || pathname.endsWith("/dashboard/login")) {
+    return NextResponse.next();
+  }
+
   // Handle dashboard authentication first (before i18n middleware)
   // Extract locale from pathname (e.g., /ar/dashboard/login -> ar)
   const pathnameLocale = pathname.split('/')[1];
   const locale = ['ar', 'en'].includes(pathnameLocale) ? pathnameLocale : 'ar';
 
   // Protect dashboard routes (but allow login page)
-  if (pathname.includes('/dashboard') && !pathname.includes('/dashboard/login')) {
+  if (pathname.startsWith('/dashboard') || pathname.includes('/dashboard')) {
     const token = req.cookies.get('dashboard_token')?.value;
-
     if (!token) {
       // Redirect to login page with proper locale
       return NextResponse.redirect(new URL(`/${locale}/dashboard/login`, req.url));
     }
+    // لا تستخدم jwt.verify هنا، فقط وجود التوكن يكفي
+    return NextResponse.next();
   }
 
   // Apply i18n middleware for all routes
