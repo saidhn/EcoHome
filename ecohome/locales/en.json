@@ -1,0 +1,211 @@
+{
+  "common": {
+    "company_name": "ReframeBuilds",
+    "tagline": "Smart. Sustainable. Ready-to-Live Homes"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Our Projects",
+    "services": "Our Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "get_quote": "Get Quote"
+  },
+  "hero": {
+    "title": "Smart. Sustainable. Ready-to-Live Homes",
+    "subtitle": "Experience the future of better living with our expertly designed ready-made homes. Sustainable design harmonized with modern comfort.",
+    "cta": "Discover Us"
+  },
+  "whyUs": {
+    "title": "Why Choose ReframeBuilds",
+    "subtitle": "We are committed to delivering exceptional homes that combine innovation, sustainability, and affordability.",
+    "features": {
+      "sustainable": {
+        "title": "Sustainable",
+        "description": "Eco-friendly materials and energy-efficient design to reduce environmental impact"
+      },
+      "fast_delivery": {
+        "title": "Fast Delivery",
+        "description": "Move into your dream home within weeks with our streamlined process"
+      },
+      "quality": {
+        "title": "Quality Built",
+        "description": "Premium building standards with strict quality control at every stage"
+      },
+      "value": {
+        "title": "Great Value",
+        "description": "Affordable prices without compromising on design or material quality"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are pioneers in the future of sustainable living through our ability to design and build innovative ready-made homes."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Are you ready to start your journey towards sustainable living? We'd love to hear from you.",
+    "form": {
+      "title": "Request a Quote",
+      "name": "Full Name",
+      "name_placeholder": "Name",
+      "email": "Email Address",
+      "email_placeholder": "Email",
+      "phone": "Phone Number",
+      "phone_placeholder": "Phone Number",
+      "subject": "Subject",
+      "subject_placeholder": "Subject",
+      "message": "Message",
+      "message_placeholder": "Write your message here...",
+      "submit": "Send",
+      "success": "✅ Message sent successfully!",
+      "error": "❌ Failed to send message, please try again.",
+      "error_generic": "❌ An error occurred while sending.",
+      "validation": {
+        "name_required": "Name is required",
+        "email_invalid": "Invalid email address",
+        "message_required": "Message is empty"
+      }
+    },
+    "info": {
+      "location_title": "Our Location",
+      "location_address": "Gaza - Al-Nasr - Second Street next to the Telecommunications Company",
+      "phone_title": "Phone",
+      "email_title": "Email"
+    }
+  },
+  "partner": {
+    "title": "Our Innovative Products",
+    "subtitle": "We showcase a range of products we offer using the latest technologies."
+  },
+  "footer": {
+    "company_section": "Company",
+    "about": "About Company",
+    "products": "Our Products",
+    "support_section": "Support",
+    "contact_us": "Contact Us",
+    "contact_section": "Contact Us",
+    "copyright": "© 2026 reframebuilds. All rights reserved."
+  },
+  "values": {
+    "title": "Our Values",
+    "subtitle": "Our values lie in the core principles of everything we do, from the design phase to the delivery phase.",
+    "items": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously invest in new technologies and methods to improve efficiency, quality, and sustainability."
+      },
+      "customer_first": {
+        "title": "Customer First",
+        "description": "Every home is built with care and attention to detail, ensuring complete satisfaction for our customers."
+      },
+      "expert_team": {
+        "title": "Expert Team",
+        "description": "Our team and partners from global and local companies and construction offices, including engineers and craftsmen, have decades of accumulated experience in sustainable construction and innovation capability."
+      },
+      "our_mission": {
+        "title": "Our Mission",
+        "description": "Making high-quality sustainable housing accessible to everyone through innovative manufacturing technology."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your journey with your ready-made home, from initial design to your lifetime home.",
+    "items": {
+      "custom_design": {
+        "name": "Custom Home Design",
+        "description": "Work with a team that combines global and local expertise to design fully customized ready-made homes tailored to your unique vision, lifestyle, and site requirements.",
+        "list": [
+          "Architectural consultations",
+          "Development of plans for your residential expectations for custom residential and utility units",
+          "Material selection and final exterior and interior design",
+          "3D visualization and presentation"
+        ]
+      },
+      "full_construction": {
+        "name": "Full Construction Services",
+        "description": "A complete ready-made solution from site preparation to final installation, ensuring your home is ready to live in with craftsmanship and professionalism.",
+        "list": [
+          "Site assessment and preparation",
+          "Foundation and utility installation",
+          "Delivery and installation",
+          "Final inspections and quality certificates"
+        ]
+      },
+      "interior_design": {
+        "name": "Interior Design Consultation",
+        "description": "Transform your home into what you envision as your lifetime home with professional interior design services and custom finishing options.",
+        "list": [
+          "Space planning and design optimization.",
+          "Selection of appropriate colors and materials.",
+          "Furniture and decor recommendations.",
+          "Planning the integration of modern technologies to turn your home into a smart home."
+        ]
+      },
+      "modular_additions": {
+        "name": "Modular Additions",
+        "description": "Change the shape or size of your existing home with modular additions that seamlessly integrate with its current structure while maintaining architectural harmony",
+        "list": [
+          "New room and facility additions",
+          "Guest houses and additional residential units",
+          "Innovative office and residential units",
+          "Garage and storage solutions"
+        ]
+      },
+      "delivery_installation": {
+        "name": "Delivery and Installation",
+        "description": "Professional delivery and installation services ensure your ready-made home arrives safely and is assembled with global expertise that moves between countries and meets needs",
+        "list": [
+          "Nationwide delivery coordination",
+          "Crane and heavy equipment services associated with international reconstruction services",
+          "Specialized installation teams with global partnerships",
+          "Post-installation support"
+        ]
+      },
+      "maintenance_support": {
+        "name": "Maintenance and Support",
+        "description": "Ongoing maintenance programs and support services to keep your home in good condition for years to come",
+        "list": [
+          "Annual maintenance inspections",
+          "Warranty coverage and repairs",
+          "Upgrade and renovation services",
+          "24/7 customer service hotline throughout the year."
+        ]
+      }
+    }
+  },
+  "story": {
+    "heading": "Our journey from modular toys to flexible housing started from an idea to an integrated system",
+    "paragraph1": "Our journey began in 2016, with a clear vision to revolutionize Modular Design, aiming to create practical and impactful solutions that serve people and communities in an innovative and sustainable way. The idea was born from a deep belief that design can be a tool for change, and that real solutions start from understanding humans and their needs and transforming them into an innovative product that helps people meet their needs.",
+    "paragraph2": "In 2018, the vision turned into tangible reality when we began developing educational toys based on Modular Design, aimed at developing creativity, problem-solving, and hands-on learning in children. These were not just toys, but smart educational tools that connect play with the educational experience and reflect the philosophy of flexible, scalable design.",
+    "paragraph3": "These toys are based on modular design and aim to develop thinking, stimulate creativity, and connect learning with practical experience. By 2019, our expertise in designing precise and easy-to-assemble modular systems earned us our first pre-orders, which were the first fruits of this work, confirming that our approach is not just an idea, but a scalable and applicable model. We began receiving actual orders for our educational products, as a result of the trust built in design quality, execution precision, and ease of installation and customization.",
+    "paragraph4": "With the progression of years and the acceleration of global changes, especially 2024-2025, we moved from the scope of educational toys to broader horizons. Our vision expanded to include sustainable flexible housing, based on recycling, to provide solutions adaptable to modern communities and emergency situations. Starting from a simple belief: (Everyone deserves beautiful and sustainable homes without long construction times and exorbitant costs of traditional construction). We began a new phase of innovation in flexible and sustainable housing, based on recycling, waste reduction, and rapid response to human needs. Founder Basel Al-Herbawi saw an opportunity to revolutionize home construction by combining advanced manufacturing techniques with principles of sustainable flexible designs that preserve resources, setting a new standard for sustainable living, where our designs rely on renewable energy, eco-friendly materials, and recycling, ensuring every product contributes to a healthier planet.",
+    "paragraph5": "In 2025, we established strategic partnerships with global companies, launching strategic partnerships with industrial companies in China. These partnerships aim to import and manufacture mobile and modular homes compatible with the modular design philosophy we believe in, some of which are from our innovations, to be adaptable, easy to transport, and suitable for different environments for human, community, and developmental use. Specifically designed to be portable and more flexible and sustainable, while maintaining the modular design philosophy that has proven successful in our educational products.",
+    "paragraph6": "Thus, our journey transformed from a simple educational toy to an innovative global system, redefining how we learn, live, and build sustainably. Our journey was not just a transition from one product to another, but an intellectual and technical journey that began with an educational toy and evolved into an integrated system redefining the concept of construction, education, and sustainability. This is not the end of the story... but the beginning of a new phase, where we reshape the future and continue innovation step by step.",
+    "section1_title": "🧩 From Idea to Revolution: The Story of Globally Transforming Construction",
+    "section1_content": "In a world witnessing radical transformations in every field, the construction sector has not remained outside the scope of revolution. The need for faster, more efficient, and flexible construction methods began with the rapid rise in housing demand, environmental pressures, and emergencies requiring immediate solutions. From here, the journey of Modular Design began - not just as an alternative to traditional construction, but as a starting point toward an entirely new construction system.",
+    "section2_title": "🏗 The Beginnings: Modular Design is Not Just an Idea",
+    "section2_content": "The modern story of modular building design began from the depths of destruction in Gaza, where units are manufactured off-site, then assembled like LEGO pieces to reach a complete building. This method allows for accelerating the construction process, reducing waste, and leading to more accurate and quality products compared to traditional construction. The core value of this idea is that construction becomes measurable, controllable, and repeatable, where each unit represents a piece in a larger system, and can be produced in large quantities in equipped factories and delivered to the site for final assembly.",
+    "section3_title": "🏠 The Global Transition: Why Has Modular Design Become a Necessity?",
+    "section3_content": "In our world today, there are countless challenges: acute housing crises in many major cities, where supply does not keep up with demand. Natural disasters and wars that destroy infrastructure and create urgent housing crises. Growing interest in sustainability and reducing carbon emissions. Based on this, Modular Design has become not a passing option with no great value or secondary or considered a luxury, but a rapidly accelerating global trend to meet these needs. Using this type of construction allows for reducing execution time, reducing waste, and increasing design flexibility.",
+    "section4_title": "🔄 Flexibility in Construction - Resilient Construction",
+    "section4_content": "With climate changes and major crises (earthquakes, floods, environmental disasters), what is known as Resilient Buildings emerged - buildings capable of adapting, enduring, and recovering quickly after crises. Here appears the role of companies and modern concepts like ReframeBuilds (derived from the spirit of Reframe Systems) that offer smart and sustainable ready-to-live homes with designs combining comfort, sustainability, and fast delivery. Flexible design doesn't just mean fast construction, but also building units that can be updated, moved, or reconfigured as needed - making them ideal for changing life, crises, and even future projects.",
+    "section5_title": "🏭 The Shift to Local Manufacturing and Recycling",
+    "section5_content": "With the increasing scale of global destruction and the need for rapid solutions, thinking began about moving construction from traditional sites to advanced production lines - small distributed factories (Microfactories) close to projects, precisely controlling every stage from design to delivery. But here comes a bigger step: innovation in recycling. Instead of relying only on new industrial materials, researchers and designers began: Using recycled materials as new raw materials. Integrating sustainable materials in manufacturing such as recycled wood, recycled plastic, and others. Designing units that can be disassembled and reused in new projects. This idea transforms construction from a resource-wasting process to a sustainable circular system.",
+    "section6_title": "🏡 From Ready-Made Homes to the Future",
+    "section6_intro": "Ultimately, this vision transformed into an integrated construction system:",
+    "section6_list": [
+      "Flexible modular design - customizable and repeatable.",
+      "Fast and precise manufacturing in smart factories.",
+      "Flexible solutions that withstand changes and crises.",
+      "Integrating sustainability and recycling into the backbone of construction.",
+      "Homes ready to live in within a week or less instead of months or years."
+    ],
+    "conclusion_title": "In the End",
+    "conclusion_content": "In the end, today, construction is not viewed as a collection of traditional manual crafts, but as a smart and innovative industrial system that responds to human needs quickly. The story is no longer just about a house being built, but about moving from crisis to hope, from destruction to reconstruction, and from wasted materials to resources that are recycled and brought back to life, from death to life.",
+    "essence_title": "And here lies the essence of the narrative:",
+    "essence_content": "(Construction is no longer just about engineering and materials sciences, but has become an integrated ecosystem for resilience, innovation, and a sustainable and hopeful future).",
+    "image_alt": "About EcoHomes"
+  }
+}
