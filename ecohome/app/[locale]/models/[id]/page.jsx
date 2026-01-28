@@ -1,7 +1,7 @@
 
 import NavBar from '@/app/Components/Navbar';
 import Footer from '@/app/Components/footer';
-import { connectDB } from '../../../lib/mongodb';
+import { connectDB } from '@/lib/mongodb';
 import Product from '../../models/Product';
 import ClientSlider from './Components/slider-client';
 import VideoModal from './Components/VideoToggle';
